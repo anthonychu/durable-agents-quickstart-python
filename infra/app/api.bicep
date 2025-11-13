@@ -14,8 +14,8 @@ param identityClientId string = ''
 param resourceToken string
 param actualSuffix string
 
-param runtimeName string = 'dotnet-isolated'
-param runtimeVersion string = '9.0'
+param runtimeName string = 'python'
+param runtimeVersion string = '3.12'
 
 @allowed(['SystemAssigned', 'UserAssigned'])
 param identityType string = 'UserAssigned'
@@ -103,6 +103,7 @@ module api 'br/public:avm/res/web/site:0.15.1' = {
         APPLICATIONINSIGHTS_CONNECTION_STRING: applicationInsights.properties.ConnectionString
         APPLICATIONINSIGHTS_AUTHENTICATION_STRING: applicationInsightsIdentity
         AzureWebJobsFeatureFlags: 'EnableWorkerIndexing'
+        PYTHON_ENABLE_WORKER_EXTENSIONS: '1'
       })
     virtualNetworkSubnetId: !empty(virtualNetworkSubnetId) ? virtualNetworkSubnetId : null
     siteConfig: {
