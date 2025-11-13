@@ -4,5 +4,5 @@
 
 azure-functions
 azure-identity
-https://gist.github.com/anthonychu/96bb85aa81566961d86a8984e8ac8f0f/raw/a72b8864b305b17bddc756cae4fe9fbb244af211/agent_framework_core-1.0.0b251112-py3-none-any.whl
-https://gist.github.com/anthonychu/96bb85aa81566961d86a8984e8ac8f0f/raw/a72b8864b305b17bddc756cae4fe9fbb244af211/agent_framework_azurefunctions-1.0.0b251028-py3-none-any.whl
+agent-framework
+agent-framework-azurefunctions
