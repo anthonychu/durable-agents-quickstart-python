@@ -3,6 +3,8 @@ from agent_framework.azure import AzureOpenAIChatClient, AgentFunctionApp
 from azure.identity import DefaultAzureCredential
 
 endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+if not endpoint:
+    raise ValueError("AZURE_OPENAI_ENDPOINT is not set.")
 deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o-mini")
 
 # Create an AI agent following the standard Microsoft Agent Framework pattern
