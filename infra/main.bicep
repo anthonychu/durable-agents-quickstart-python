@@ -225,7 +225,7 @@ module dts './app/dts.bicep' = {
 }
 
 // Allow access from durable function to storage account using a user assigned managed identity
-module dtsRoleAssignment 'app/rbac/dts-Access.bicep' = {
+module dtsRoleAssignment 'app/rbac/dts-access.bicep' = {
   name: 'dtsRoleAssignment'
   scope: rg
   params: {
@@ -236,7 +236,7 @@ module dtsRoleAssignment 'app/rbac/dts-Access.bicep' = {
   }
 }
 
-module dtsDashboardRoleAssignment 'app/rbac/dts-Access.bicep' = {
+module dtsDashboardRoleAssignment 'app/rbac/dts-access.bicep' = {
   name: 'dtsDashboardRoleAssignment'
   scope: rg
   params: {
